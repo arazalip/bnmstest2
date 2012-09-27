@@ -1,0 +1,186 @@
+body{
+    direction: rtl;
+    font-family: Tahoma,serif;
+    font-size: 12px;
+    overflow-x: hidden;
+}
+button{
+    font-size: 12px;
+}
+#container{
+    background-color: #EFEFEF;
+    min-height: 430px;
+    margin-right: 13px;
+    padding-top: 30px;
+    width: 1325px;
+    border: 1px solid #9ACD32;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+#top-navigation {
+    position:relative;
+    top:-13px;
+    margin:0;
+    padding:0;
+    list-style:none;
+    right: 15px;
+}
+#top-navigation li {
+    float:right;
+    margin:0 4px 0 0;
+    height:20px;
+}
+#top-navigation li a {
+    float:right;
+    display:block;
+    height:20px;
+    line-height:19px;
+    margin-top:9px;
+    color:#606060;
+    padding:4px 10px 0 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    background:#EAF1AF;
+    text-decoration: none;
+}
+#top-navigation li a:hover {
+    border:1px #9ACD32 solid;
+    border-bottom: none;
+    background:#fff;
+    margin: 8px -1px;
+    text-decoration: none;
+}
+#top-navigation li a.active {
+    padding:6px 10px 0 10px;
+    height:20px;
+    border:1px #9ACD32 solid;
+    border-bottom:none;
+    margin-top:7px;
+    background-color:#EFEFEF;
+    line-height:19px;
+    text-decoration: none;
+}
+
+
+#header{
+    height: 77px;
+    width: 100%;
+}
+#header h1{
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 50px;
+    width: 400px;
+    float: right;
+    font-family: Georgia, serif;
+}
+#header img{
+    float:left;
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.inputDiv{
+    height: 30px;
+}
+.inputDiv label{
+    float: right;
+    width: 215px;
+}
+
+.inputDiv input, .inputDiv button{
+    float: right;
+}
+
+#control{
+    margin-right: 50px;
+    float: right;
+    width: 440px;
+}
+
+#order-creation{
+    margin-right: 50px;
+    float: right;
+}
+
+.orderInput{
+    margin-right: 20px;
+    float: right;
+}
+
+.help{
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+.help:hover{
+    cursor: pointer;
+}
+
+.helpDiv{
+    display: none;
+    width: 400px;
+    height: 400px;
+    background-color: #FFFFFF;
+}
+
+#stats{
+    margin-right: 20px;
+    float: right;
+    width: 810px;
+    height: 390px;
+}
+
+.integer{
+    width: 100px;
+    direction: ltr;
+}
+
+.fileUpload{
+    display: none;
+}
+
+.command{
+    width: 390px;
+    margin-right: 20px;
+}
+
+#queues{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.queueTable{
+    float: right;
+    width: 400px;
+    margin: 10px;
+    font-weight: lighter;
+    font-size: 11px;
+}
+
+.queueTable td{
+    text-align: center;
+}
+
+.queueTable, .queueTable th, .queueTable td{
+    text-decoration: none;
+    border: 1px solid;
+    border-collapse: collapse;
+    font-weight: lighter;
+}
+.queueTable td{
+    height: 20px;
+}
+
+#trades{
+    width: 1000px;
+    margin: 0 auto;
+}

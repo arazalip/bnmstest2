@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:bnmstest.properties</value>
+            </list>
+        </property>
+        <property name="searchSystemEnvironment" value="true"/>
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+    </bean>
+
+    <context:annotation-config />
+    <bean id="activityLogger" class="com.bourse.nms.log.ActivityLogger">
+        <constructor-arg index="0" value="${activity_logger_queue_size}"/>
+        <constructor-arg index="1" value="${activity_log_path}"/>
+    </bean>
+    <bean id="generator" class="com.bourse.nms.generator.GeneratorImpl"/>
+    <bean id="engine" class="com.bourse.nms.engine.EngineImpl">
+        <constructor-arg index="0" value="${queues_initial_size}"/>
+    </bean>
+    <bean id="settings" class="com.bourse.nms.entity.Settings"/>
+<!--
+
+    <bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="driverUrl" value="${db.driver-url}"/>
+        <property name="minimumConnectionCount" value="2"/>
+        <property name="houseKeepingTestSql" value="SELECT 1"/>
+        <property name="testBeforeUse" value="true"/>
+        <property name="alias" value="${db.alias}"/>
+        <property name="user" value="${db.user}"/>
+        <property name="password" value="${db.pass}"/>
+        <property name="maximumConnectionCount" value="${db.max-conn}"/>
+        <property name="simultaneousBuildThrottle" value="${db.sim-build-throttle}"/>
+    </bean>
+    <bean id="dbInterface" class="com.bourse.nms.db.DBInterface">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+-->
+</beans>
